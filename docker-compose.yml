@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  app:
+    image: react-dev
+    build: .
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: sh -c "yarn start:watch"
+    ports:
+      - "3001:3001"
